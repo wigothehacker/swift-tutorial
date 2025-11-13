@@ -53,6 +53,12 @@ for num in numArray{
     sum += num
 }
 print("The sum is \(sum)")
+
+var condition = 10
+while condition > 0 {
+    print(condition)
+    condition -= 1
+}
  
 //Level 4
 
@@ -71,6 +77,22 @@ func isAdult(age:Int)->Bool{
 }
 print("is Goal Adult \(isAdult(age: 20))")
 
+let person=[ "name" : "Wilson" , "age" :" 17", "country" : "Rwanda" ]
+
+for (key,value) in person {
+    print("\(key) : \(value)")
+}
+
+switch condition {
+case 5 :
+    print("Testing")
+default:
+    print("Done")
+}
+
+for t in 1..<5{
+    print("Testing \(t)")
+}
 //level 5
 
 var nickname:String? = nil
@@ -81,3 +103,42 @@ if let nickname{
 }else {
     print("No nickname")
 }
+
+struct Person{
+    var name:String
+    var age:Int
+    func sayHi(){
+        print("Hi, I'm \(name)")
+    }
+    func isAdult()->Bool{
+        return 18 <= age
+    }
+}
+let p=Person(name: "Wilson", age: 17)
+p.sayHi()
+
+enum Direction{
+    case north,south,east,west
+
+    func getMessage( )->String{
+        
+        switch self {
+        case .north :
+            return "North"
+        case .south :
+            return "South"
+        case .west :
+            return "West"
+        default: return "East"
+        }
+    }
+}
+let direction=Direction.east
+print(direction.getMessage())
+
+
+
+
+
+//level 6
+
