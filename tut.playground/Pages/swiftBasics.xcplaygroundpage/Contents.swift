@@ -142,3 +142,26 @@ print(direction.getMessage())
 
 //level 6
 
+class Animal{
+    var name:String
+    init(name: String) {
+        self.name = name
+    }
+    
+    func speak(){
+        print("Animal speaking")
+    }
+}
+
+class Dog:Animal{
+    override func speak() {
+     print("Woowowowwo")
+    }
+}
+
+let animal=Animal(name: "Hen")
+let dog=Dog(name: "Foh")
+dog.speak()
+animal.speak()
+var pet:Dog?
+pet?.speak()
