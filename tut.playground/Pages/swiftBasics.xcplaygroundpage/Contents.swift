@@ -35,5 +35,49 @@ if temperature > 30 {
     print("Cold")
 }
 
+//level 3
+let foods = ["Apple","Banana","Mangoes","Dod","Tofu"]
 
+for food in foods {
+    print(food)
+}
+
+for num in 0...10{
+    let even=(num % 2) == 0
+    print(even ? "This is even(\(num))":"This is odd(\(num))")
+}
+
+let numArray = [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+var sum = 0
+for num in numArray{
+    sum += num
+}
+print("The sum is \(sum)")
  
+//Level 4
+
+func addNumbers (a:Int,b:Int) -> Int{
+    return a + b
+}
+print(addNumbers(a: 10, b: 20))
+
+func greetUser(user:String){
+    print("Hello \(user)!")
+}
+greetUser(user: "Goal")
+
+func isAdult(age:Int)->Bool{
+    return 18 <= age
+}
+print("is Goal Adult \(isAdult(age: 20))")
+
+//level 5
+
+var nickname:String? = nil
+
+print(nickname != nil ? "Nickname: \(nickname!)" : "No nickname")
+if let nickname{
+    print("Nickname: \(nickname)")
+}else {
+    print("No nickname")
+}
