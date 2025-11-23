@@ -165,3 +165,54 @@ dog.speak()
 animal.speak()
 var pet:Dog?
 pet?.speak()
+
+protocol Car{
+    var speed:Int{get set}
+    func drive()
+    
+}
+extension Car {
+    func squared()->Int{
+        return self.speed*self.speed
+    }
+}
+class Test:Car{
+    var speed :Int
+    init(speed: Int) {
+        self.speed = speed
+    }
+    func drive() {
+        print("Car is Driving")
+    }
+    
+}
+
+let car = Test(speed:10)
+car.drive()
+print(car.squared())
+
+enum LoginError :Error{
+    case wrongPassword
+}
+
+func login(password:String )throws {
+    if password == "test"{
+        print("Password correct")
+    }else {
+        throw LoginError.wrongPassword
+    }
+}
+
+func test( ){
+    do{
+      try  login(password: "test")
+    }catch LoginError.wrongPassword {
+        print("We are catching things")
+    }catch{
+        print("We don't know")
+    }
+}
+
+test()
+var username: String?
+print(username ?? "Guest")
